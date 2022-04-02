@@ -1,0 +1,131 @@
+.main-header {
+  text-align: center;
+  letter-spacing: 0.4rem;
+  line-height: 5rem;
+  row-gap: 2rem;
+  font-size: 3rem;
+  margin: 20rem 2rem 5rem 2rem;
+  color: var(--main-grey-light-clr);
+  font-weight: 100;
+  transform: translateY(200px) 1s;
+}
+
+.about-main-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  margin: 25rem 0 35rem 8rem;
+}
+
+.about-img {
+  height: 550px;
+  z-index: 4;
+  box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px,
+    rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+}
+
+.about-txt-container {
+  max-width: 780px;
+  padding: 2rem 4rem;
+  line-height: 1.7rem;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  background-color: var(--main-white-clr);
+  z-index: 3;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.about-txt-container h1,
+p {
+  margin-bottom: 3rem;
+}
+
+.about-header {
+  font-weight: bolder;
+  text-align: center;
+  word-spacing: 1.5rem;
+  line-height: 2.5rem;
+}
+
+.btn {
+  padding: 1rem 2.5rem;
+  border: none;
+  font-size: var(--normal-font-size);
+  background-color: var(--main-black-clr);
+  color: var(--main-white-clr);
+  cursor: pointer;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px,
+    rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+  border-radius: 50px;
+}
+
+.about-btn {
+  margin-bottom: 1rem;
+}
+
+/* ==================== Hovers ==  */
+
+.about-btn:hover {
+  position: relative;
+  background-color: rgb(71, 71, 71);
+  transition: 0.2s;
+}
+
+/* ==================== Media queries ==  */
+
+@media (max-width: 1900px) {
+  .about-main-container {
+    margin-left: 5rem;
+    transition: 0.3s;
+  }
+}
+
+@media (max-width: 1600px) {
+  .about-img {
+    height: 450px;
+    transition: 0.3s;
+  }
+
+  .about-main-container {
+    flex-direction: column;
+    margin-left: 2rem;
+  }
+
+  .about-txt-container h1,
+  p {
+    margin-bottom: 1.5rem;
+  }
+}
+
+@media (max-width: 900px) {
+  .main-header {
+    font-size: 2rem;
+    transition: 0.3s;
+  }
+
+  .about-img {
+    height: 350px;
+    transition: 0.3s;
+  }
+
+  .about-txt-container {
+    width: 500px;
+  }
+}
+
+@media (max-width: 600px) {
+  .about-main-container {
+    flex-direction: column;
+    margin-left: 0.5rem;
+  }
+
+  .about-txt-container {
+    padding: 2rem;
+    width: 400px;
+    transition: 0.3s;
+  }
+}

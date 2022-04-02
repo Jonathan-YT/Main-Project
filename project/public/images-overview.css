@@ -1,0 +1,263 @@
+.img-genre-main-container {
+  background: linear-gradient(
+      rgba(255, 255, 255, 0.8),
+      rgba(255, 255, 255, 0.8)
+    ),
+    url(../src/assets/clyde-rs-4XbZCfU2Uoo-unsplash.jpg);
+  background-size: cover;
+  background-position-y: center;
+  background-position-x: center;
+  width: 100vw;
+  height: 1650px;
+}
+
+.black-box-container {
+  display: flex;
+  justify-content: center;
+}
+
+.black-box {
+  position: relative;
+  left: 5rem;
+  bottom: 5rem;
+  height: 150px;
+  width: 150px;
+  background-color: var(--main-black-clr);
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
+    rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+  z-index: 1;
+}
+
+.h2-header {
+  font-size: var(--midium-half-font-size);
+  text-align: center;
+  letter-spacing: 0.3rem;
+  position: relative;
+  bottom: 1.8rem;
+}
+
+.img-genre-header span {
+  position: relative;
+  color: var(--main-white-clr);
+  z-index: 99;
+}
+
+.container-flex-centering {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.img-genre-container {
+  height: 1000px;
+  width: 50vw;
+  margin: 10rem 5rem;
+
+  display: grid;
+  gap: 1.5rem;
+  grid-template-areas:
+    'animals mountains mountains'
+    'animals bugs seas'
+    'skys skys seas';
+}
+
+.one,
+.two,
+.three,
+.four,
+.five {
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position-y: center;
+  background-position-x: center;
+  color: var(--main-white-clr);
+  font-size: var(--normal-half-font-size);
+  text-transform: uppercase;
+  cursor: pointer;
+  letter-spacing: 0.4rem;
+  box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+  text-shadow: 0px 4px 3px rgba(0, 0, 0, 0.4), 0px 8px 13px rgba(0, 0, 0, 0.1),
+    0px 18px 23px rgba(0, 0, 0, 0.1);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.one {
+  grid-area: animals;
+  background-image: url(../src/assets/clement-roy-MUeeyzsjiY8-unsplash.jpg);
+}
+
+.two {
+  grid-area: mountains;
+  background-image: url(../src/assets/jamie-hagan-RWzPBcWVdpw-unsplash.jpg);
+}
+
+.three {
+  grid-area: seas;
+  background-image: url(../src/assets/gatis-marcinkevics-a5uptAdUmjE-unsplash.jpg);
+}
+
+.four {
+  grid-area: skys;
+  background-image: url(../src/assets/diego-ph-BCuxVP5WEsU-unsplash.jpg);
+}
+
+.five {
+  grid-area: bugs;
+  background-image: url(../src/assets/harpreet-singh-Gm8is9-x4b4-unsplash.jpg);
+}
+
+.browse-btn {
+  margin-left: 5rem;
+  padding: 2.5rem 3.5rem;
+  letter-spacing: 0.4rem;
+  border: none;
+  border-radius: 60px;
+  background-color: transparent;
+  border: 3px solid var(--main-black-clr);
+  color: var(--main-black-clr);
+  font-size: var(--normal-half-font-size);
+  cursor: pointer;
+  z-index: 99;
+}
+
+.mid-page-icon {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  margin-top: 15rem;
+  color: var(--main-black-clr);
+  font-size: 3rem;
+  letter-spacing: 0.2rem;
+}
+
+.mid-page-icon i {
+  font-size: 5rem;
+  margin-bottom: 2rem;
+}
+
+/* ==================== Hovers ==  */
+
+.one:hover,
+.two:hover,
+.three:hover,
+.four:hover,
+.five:hover {
+  opacity: 0.85;
+  transition: 0.4s;
+}
+
+.browse-btn:hover {
+  background-color: rgba(176, 176, 176, 0.218);
+  transition: 0.2s;
+}
+
+/* ==================== Media queries ==  */
+@media (max-width: 1900px) {
+  .img-genre-main-container {
+    height: 1350px;
+  }
+
+  .img-genre-container {
+    height: 700px;
+  }
+
+  .browse-btn {
+    padding: 2.5rem 3rem;
+    margin-left: 2rem;
+  }
+}
+
+@media (max-width: 1200px) {
+  .container-flex-centering {
+    flex-direction: column;
+  }
+
+  .img-genre-container {
+    width: 65vw;
+  }
+
+  .browse-btn {
+    margin-top: -3rem;
+    margin-left: 0;
+  }
+}
+
+@media (max-width: 1100px) {
+  .black-box {
+    height: 100px;
+    width: 100px;
+    left: 4.15rem;
+    bottom: 3.3rem;
+  }
+
+  .h2-header {
+    font-size: var(--midium-font-size);
+    bottom: 1.4rem;
+  }
+}
+
+@media (max-width: 1000px) {
+  .h2-header {
+    margin-right: 1rem;
+    line-height: 4rem;
+    bottom: 2.2rem;
+  }
+}
+
+@media (max-width: 900px) {
+  .img-genre-main-container {
+    height: 1500px;
+  }
+
+  .img-genre-container {
+    grid-template-areas:
+      'animals animals '
+      'mountains mountains'
+      'skys skys'
+      'seas seas'
+      'bugs bugs';
+  }
+
+  .one,
+  .two,
+  .three,
+  .four,
+  .five {
+    height: 10rem;
+  }
+
+  .one {
+    background-position-y: 25%;
+  }
+
+  .five {
+    background-position-y: 75%;
+  }
+
+  .browse-btn {
+    margin-top: 10rem;
+  }
+}
+
+@media (max-width: 810px) {
+  .black-box {
+    display: none;
+  }
+
+  .img-genre-header span {
+    color: var(--main-black-clr);
+  }
+}
+
+@media (max-width: 700px) {
+  .browse-btn {
+    padding: 2rem 2.5rem;
+    font-size: var(--normal-font-size);
+  }
+}

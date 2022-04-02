@@ -1,0 +1,242 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: operator mono medium;
+}
+
+:root {
+  /* ==== Colors ==== */
+  --main-white-clr: rgb(255, 255, 255);
+  --main-black-clr: rgb(0, 0, 0);
+  /* --main-grey-clr: #444;
+  --main-grey-light-clr: rgb(91, 91, 91); */
+
+  /* ==== Font-size ==== */
+  --normal-font-size: 1rem;
+  --normal-half-font-size: 1.5rem;
+  --midium-font-size: 2rem;
+  --midium-half-font-size: 2.5rem;
+  --large-font-size: 3rem;
+  --large-half-font-size: 3.5rem;
+}
+
+body::-webkit-scrollbar {
+  display: none;
+}
+
+li {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.nav-pic-container {
+  background-image: url('../src/assets/aniket-deole-M6XC789HLe8-unsplash.jpg');
+  background-size: cover;
+  background-position-y: top;
+  background-position-x: center;
+  background-repeat: no-repeat;
+  position: relative;
+  height: 65vh;
+  width: 100%;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+
+  display: flex;
+  justify-content: space-between;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+
+  color: var(--main-white-clr);
+  padding: 1.3rem;
+  margin: 1rem;
+  letter-spacing: 1.5px;
+  font-size: var(--midium-font-size);
+}
+
+.logo i {
+  margin-right: 1rem;
+  font-size: var(--large-font-size);
+}
+
+.ul-container {
+  display: flex;
+  justify-content: space-between;
+
+  width: 40vw;
+  margin-top: 3.5rem;
+  padding-right: 4rem;
+}
+
+li > * {
+  color: var(--main-white-clr);
+}
+
+ul li a {
+  letter-spacing: 1.5px;
+  font-size: var(--normal-font-size);
+}
+
+.shop {
+  border: 2px solid var(--main-white-clr);
+  padding: 0.8rem 1.5rem;
+  border-radius: 50px;
+  background-color: rgba(0, 0, 0, 0.389);
+}
+
+.arrow-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateY(-50%) translateX(-50%);
+  width: 100vw;
+
+  display: flex;
+  justify-content: space-between;
+}
+
+.arrow-container > * {
+  position: relative;
+  color: var(--main-white-clr);
+  padding: 1.5rem;
+  cursor: pointer;
+  font-size: var(--midium-font-size);
+}
+
+.home,
+.about,
+.browse,
+.contact {
+  position: relative;
+  text-decoration: none;
+  padding: 0.3rem;
+}
+
+.s-button {
+  display: none;
+}
+
+/* ==================== Classes for javaScript (DOM) ==  */
+.picture2 {
+  background-image: url('../src/assets/johannes-plenio-Xz5muLnKXC0-unsplash.jpg');
+}
+.picture3 {
+  background-image: url('../src/assets//shutter_speed-F9SiIMGAhos-unsplash.jpg');
+}
+.picture4 {
+  background-image: url('../src/assets/jf-brou-915UJQaxtrk-unsplash.jpg');
+}
+.picture5 {
+  background-image: url('../src/assets/johannes-plenio-Xz5muLnKXC0-unsplash.jpg');
+}
+
+/* ==================== Hovers ==  */
+
+.arrow-container > *:hover {
+  background-color: rgba(255, 255, 255, 0.176);
+}
+
+.home::before,
+.about::before,
+.browse::before,
+.contact::before {
+  content: '';
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: var(--main-white-clr);
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+}
+
+.home:hover::before,
+.about:hover::before,
+.browse:hover::before,
+.contact:hover::before {
+  transform: scaleX(1);
+}
+
+.shop:hover {
+  background-color: rgba(255, 255, 255, 0.087);
+  transition: 0.2s;
+}
+
+/* ==================== Media queries ==  */
+
+@media (max-width: 1700px) {
+  .ul-container {
+    width: 50vw;
+  }
+}
+
+@media (max-width: 1000px) {
+  .nav-pic-container {
+    justify-content: end;
+    height: 70vh;
+  }
+
+  .logo-container {
+    position: absolute;
+    left: 0;
+  }
+
+  .ul-container {
+    justify-content: space-between;
+    margin-left: 30vw;
+  }
+
+  .logo {
+    margin-right: 0.5rem;
+    margin-top: 1.3rem;
+    font-size: var(--normal-half-font-size);
+  }
+
+  .fa-camera-retro {
+    margin-right: 1rem;
+    font-size: var(--midium-half-font-size);
+  }
+}
+
+@media (max-width: 880px) {
+  .ul-container {
+    position: absolute;
+    right: 0;
+    margin: 0;
+    height: inherit;
+    width: 10rem;
+    padding: 3rem 0 5rem 0;
+
+    background-color: rgba(0, 0, 0, 0.534);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  .fa-arrow-right {
+    right: 10rem;
+  }
+}
+
+@media (max-width: 700px) {
+  .nav-pic-container {
+    height: 100vh;
+  }
+}
+
+@media (max-width: 620px) {
+  .s-button {
+    top: 80%;
+    right: 50%;
+    padding: 1rem 4rem;
+  }
+}

@@ -1,0 +1,137 @@
+.event-main-container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 600px;
+  margin: 15rem 0;
+  padding: 4rem;
+
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url(../src/assets/tyler-lastovich-ddLiNMqWAOM-unsplash.jpg);
+  background-size: cover;
+  background-position-y: center;
+  background-position-x: center;
+}
+
+.event-container {
+  display: flex;
+  justify-content: center;
+}
+
+.white-box {
+  top: 1.5rem;
+  left: 4.9rem;
+  background-color: var(--main-white-clr);
+}
+
+.event-header {
+  top: 4.6rem;
+  color: var(--main-white-clr);
+}
+
+.event-header span {
+  position: relative;
+  color: var(--main-black-clr);
+  z-index: 99;
+}
+
+.event-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.event-form i {
+  color: var(--main-white-clr);
+  font-size: 4rem;
+}
+
+.event-btns-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.event-btns-container button {
+  margin: 0 2rem;
+  font-size: var(--normal-font-size);
+  letter-spacing: 0.2rem;
+  border-radius: 50px;
+  font-size: 1.1em;
+  cursor: pointer;
+}
+
+.order-btn {
+  padding: 1.7rem 3.5rem;
+  border: none;
+  background-color: var(--main-white-clr);
+}
+
+.email-btn {
+  padding: 1.2rem 2.8rem;
+  outline: 2px solid var(--main-white-clr);
+  background-color: transparent;
+  color: var(--main-white-clr);
+}
+
+/* ==================== Hovers ==  */
+.order-btn:hover {
+  background-color: rgb(19, 231, 83);
+  transition: 0.2s;
+}
+
+.email-btn:hover {
+  background-color: rgba(255, 255, 255, 0.156);
+  transition: 0.2s;
+}
+
+/* ==================== Media queries ==  */
+@media (max-width: 1601px) {
+  .white-box {
+    width: 120px;
+    height: 120px;
+    top: 2rem;
+  }
+
+  .event-header {
+    font-size: var(--midium-font-size);
+    left: 0.8rem;
+  }
+}
+
+@media (max-width: 1265px) {
+  .white-box {
+    display: none;
+  }
+
+  .black-box-container {
+    margin-top: -4rem;
+  }
+
+  .event-container {
+    margin-bottom: 2rem;
+  }
+
+  .event-header {
+    line-height: 3rem;
+  }
+
+  .event-header span {
+    color: var(--main-white-clr);
+  }
+}
+
+@media (max-width: 713px) {
+  .event-main-container {
+    padding-top: 5rem;
+  }
+
+  .event-btns-container {
+    height: 300px;
+    margin-top: 10rem;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+}

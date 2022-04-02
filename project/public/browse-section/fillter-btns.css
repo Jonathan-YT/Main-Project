@@ -1,0 +1,40 @@
+.fillter-btns-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin: 10rem 3rem;
+}
+
+/* 
+.fillter-btns-header {
+} */
+
+.fillter-btns-container button {
+  cursor: pointer;
+  /* outline: 2px solid var(--main-black-clr); */
+  border: none;
+  border-radius: 50px;
+  background-color: transparent;
+  color: var(--main-black-clr);
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
+    rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+  padding: 1.5rem 3rem;
+  margin: 1rem;
+  letter-spacing: 0.2rem;
+  font-size: var(--normal-font-size);
+}
+
+/* ==================== Hovers ==  */
+
+.fillter-btns-container button:hover {
+  background-color: rgba(246, 246, 246, 0.807);
+}
+
+/* ==================== Media queries ==  */
+@media (max-width: 700px) {
+  .fillter-btns-container button {
+    padding: 1rem 2rem;
+    margin: 1rem 0.5rem;
+  }
+}

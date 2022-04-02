@@ -1,0 +1,31 @@
+footer {
+  display: flex;
+  justify-content: space-around;
+  align-items: end;
+  height: 100px;
+  margin-bottom: 1rem;
+}
+
+.social-media-icons {
+  font-size: var(--normal-font-size);
+}
+
+.social-media-icons > * {
+  cursor: pointer;
+  height: 1.5rem;
+  margin-left: 4rem;
+}
+
+/* ==================== Media queries ==  */
+@media (max-width: 800px) {
+  footer {
+    flex-direction: column;
+    flex-direction: column-reverse;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  .social-media-icons {
+    margin-left: -4rem;
+  }
+}
